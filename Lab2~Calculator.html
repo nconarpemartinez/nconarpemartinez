@@ -1,70 +1,50 @@
 <!DOCTYPE html>
+<!-- Nico Conarpe-Martinez ~ Calculator Lab -->
 
-<html lang="en">
-<head>
-    <!--<meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    h1 {text-align: center}
+</style>
 
-    <link rel = "stylesheet" href = "CalcStyle.CSS">
+<h1 style = "color:red;">Calculator Program</h1>
 
-    <title>
-        Calculator
-    </title>
-</head>
-    <body>
-        <!-- This is how you comment out multiple lines at once -->
+<form> 
 
-        <div class = "calcEdge">
-            <div class="calc">
-                <!-- form = get user input -->
-            <form>
-                <div class = "display">
-                    <!-- Where the results will be displayed -->
-                    <input type = "test" name = "display">
-                </div>
+    <div>
+        <input type = "test" name = "display">
+    </div>
 
-                <div>
-                    <div>
-                        <!-- Deletes only the last value entered-->
-                        <input type = "button" value = "DEL" onclick = "display.value = display.value.toString().slice(0,-1)">
-                        <!-- Clears everything -->
-                        <input type = "button" value = "AC" onclick = "display.value = ''">
-                        <!-- In Javascript, power is written as "**", so we need to write it as such in order to compute it later on -->
-                        <input type = "button" value = "^" onclick = "display.value += '**'">
-                        <input type = "button" value = "+" onclick = "display.value += '+'">
-                    </div>
+    <div>   
+        <input type = "button" style ="background-color: teal" value = "DEL" onclick = "display.value = display.value.toString().slice(0,-1)">
+        <input type = "button" style ="background-color: teal" value = "AC" onclick = "display.value = ''">
+        <input type = "button" style ="background-color: green" value = "^" onclick = "display.value += '**'">
+        <input type = "button" style ="background-color: green" value = "+" onclick = "display.value += '+'">
+    </div>    
+    
+    <div>
+        <input type = "button" style ="background-color: green" value = "7" onclick = "display.value += '7'">
+        <input type = "button" style ="background-color: green" value = "8" onclick = "display.value += '8'">
+        <input type = "button" style ="background-color: green" value = "9" onclick = "display.value += '9'">
+        <input type = "button" style ="background-color: green" value = "-" onclick = "display.value += '-'">
+    </div>
 
-                    <div>
-                        <input type = "button" value = "7" onclick = "display.value += '7'">
-                        <input type = "button" value = "8" onclick = "display.value += '8'">
-                        <input type = "button" value = "9" onclick = "display.value += '9'">
-                        <input type = "button" value = "-" onclick = "display.value += '-'">
-                    </div>
+    <div>   
+        <input type = "button" style ="background-color: green" value = "4" onclick = "display.value += '4'">
+        <input type = "button" style ="background-color: green" value = "5" onclick = "display.value += '5'">
+        <input type = "button" style ="background-color: green" value = "6" onclick = "display.value += '6'">
+        <input type = "button" style ="background-color: green" value = "*" onclick = "display.value += '*'">
+    </div> 
 
-                    <div>
-                        <input type = "button" value = "4" onclick = "display.value += '4'">
-                        <input type = "button" value = "5" onclick = "display.value += '5'">
-                        <input type = "button" value = "6" onclick = "display.value += '6'">
-                        <input type = "button" value = "*" onclick = "display.value += '*'">
-                    </div>
+    <div>    
+        <input type = "button" style ="background-color: green" value = "1" onclick = "display.value += '1'">
+        <input type = "button" style ="background-color: green" value = "2" onclick = "display.value += '2'">
+        <input type = "button" style ="background-color: green" value = "3" onclick = "display.value += '3'">
+        <input type = "button" style ="background-color: green" value = "/" onclick = "display.value += '/'">
+    </div>
 
-                    <div>
-                        <input type = "button" value = "1" onclick = "display.value += '1'">
-                        <input type = "button" value = "2" onclick = "display.value += '2'">
-                        <input type = "button" value = "3" onclick = "display.value += '3'">
-                        <input type = "button" value = "/" onclick = "display.value += '/'">
-                    </div>
+    <div> 
+        <input type = "button" style ="background-color: green" value = "0" onclick = "display.value += '0'">
+        <input type = "button" style ="background-color: green" value = "." onclick = "display.value += '.'">
+        <input type = "button" style ="background-color: teal" value = "=" onclick = "display.value = eval(display.value)" class = "equals">
+    </div>
 
-                    <div>
-                        <input type = "button" value = "0" onclick = "display.value += '0'">
-                        <input type = "button" value = "." onclick = "display.value += '.'">
-                        <!-- Evaluates the entered values and computes them -->
-                        <input type = "button" value = "=" onclick = "display.value = eval(display.value)" class = "equals">
-                    </div>
-                </div>
-            </form>
-            </div>
-        </div>
-    </body>
-</html>
+</form>
